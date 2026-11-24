@@ -20,7 +20,7 @@ elif [ -f /etc/NIXOS ]; then
 		echo -e "\033[1;33m[UYARI]\033[0m Fiziksel kamera bulunamadi, uygulamayi video dosyasi ile calistirabilirsiniz."
     	fi
 	nix-shell -p python3 python3Packages.opencv4 python3Packages.numpy v4l-utils --run "python3 -c 'import cv2, numpy'"
-	echo "[INFO] Kurulum tamamlandi. Uygulamayi baslatmak icin su komutu calistirin:"
+	echo "[BILGI] Kurulum tamamlandi. Uygulamayi baslatmak icin su komutu calistirin:"
    	echo "nix-shell -p python3 python3Packages.opencv4 python3Packages.numpy v4l-utils --run 'python3 main.py'"
    	exit 0
 fi
@@ -42,5 +42,5 @@ fi
 source .venv/bin/activate
 pip install --upgrade pip
 pip install -r requirements.txt
-echo "[INFO] Kurulum tamamlandi. Uygulamayi baslatmak icin su komutu calistirin:"
+echo "[BILGI] Kurulum tamamlandi. Uygulamayi baslatmak icin su komutu calistirin:"
 echo "source .venv/bin/activate"
